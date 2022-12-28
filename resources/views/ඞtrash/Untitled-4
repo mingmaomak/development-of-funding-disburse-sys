@@ -1,0 +1,305 @@
+// based on a keyboard map from an 'xkb/symbols/th' file
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+    name[Group1]= "Thai";
+
+    // converted to THai keysysms - Pablo Saratxaga <pablo@mandrakesoft.com>
+
+    key <TLDE> { [ underscore,		percent		]	};
+    key <AE01> { [ Thai_lakkhangyao,	plus		]	};
+    key <AE02> { [ slash,		Thai_leknung	]	};
+    key <AE03> { [ minus,		Thai_leksong	]	};
+    key <AE04> { [ Thai_phosamphao,	Thai_leksam	]	};
+    key <AE05> { [ Thai_thothung,	Thai_leksi	]	};
+    key <AE06> { [ Thai_sarau,		Thai_sarauu	]	};
+    key <AE07> { [ Thai_saraue,		Thai_baht	]	};
+    key <AE08> { [ Thai_khokhwai,	Thai_lekha	]	};
+    key <AE09> { [ Thai_totao,		Thai_lekhok	]	};
+    key <AE10> { [ Thai_chochan,	Thai_lekchet	]	};
+    key <AE11> { [ Thai_khokhai,	Thai_lekpaet	]	};
+    key <AE12> { [ Thai_chochang,	Thai_lekkao	]	};
+
+    key <AD01> { [ Thai_maiyamok,	Thai_leksun	]	};
+    key <AD02> { [ Thai_saraaimaimalai,	quotedbl	]	};
+    key <AD03> { [ Thai_saraam,		Thai_dochada	]	};
+    key <AD04> { [ Thai_phophan,	Thai_thonangmontho ]	};
+    key <AD05> { [ Thai_saraa,		Thai_thothong	]	};
+    key <AD06> { [ Thai_maihanakat,	Thai_nikhahit	]	};
+    key <AD07> { [ Thai_saraii,		Thai_maitri	]	};
+    key <AD08> { [ Thai_rorua,		Thai_nonen	]	};
+    key <AD09> { [ Thai_nonu,		Thai_paiyannoi	]	};
+    key <AD10> { [ Thai_yoyak,		Thai_yoying	]	};
+    key <AD11> { [ Thai_bobaimai,	Thai_thothan	]	};
+    key <AD12> { [ Thai_loling,		comma		]	};
+
+    key <AC01> { [ Thai_fofan,		Thai_ru		]	};
+    key <AC02> { [ Thai_hohip,		Thai_khorakhang	]	};
+    key <AC03> { [ Thai_kokai,		Thai_topatak	]	};
+    key <AC04> { [ Thai_dodek,		Thai_sarao	]	};
+    key <AC05> { [ Thai_sarae,		Thai_chochoe	]	};
+    key <AC06> { [ Thai_maitho,		Thai_maitaikhu	]	};
+    key <AC07> { [ Thai_maiek,		Thai_maichattawa ]	};
+    key <AC08> { [ Thai_saraaa,		Thai_sorusi	]	};
+    key <AC09> { [ Thai_sosua,		Thai_sosala	]	};
+    key <AC10> { [ Thai_wowaen,		Thai_soso	]	};
+    key <AC11> { [ Thai_ngongu,		period		]	};
+
+    key <AB01> { [ Thai_phophung,	parenleft	]	};
+    key <AB02> { [ Thai_popla,		parenright	]	};
+    key <AB03> { [ Thai_saraae,		Thai_choching	]	};
+    key <AB04> { [ Thai_oang,		Thai_honokhuk	]	};
+    key <AB05> { [ Thai_sarai,		Thai_phinthu	]	};
+    key <AB06> { [ Thai_sarauee,	Thai_thanthakhat ]	};
+    key <AB07> { [ Thai_thothahan,	question	]	};
+    key <AB08> { [ Thai_moma,		Thai_thophuthao	]	};
+    key <AB09> { [ Thai_saraaimaimuan,	Thai_lochula	]	};
+    key <AB10> { [ Thai_fofa,		Thai_lu		]	};
+
+    key <BKSL> { [ Thai_khokhuat,	Thai_khokhon	]	};
+};
+
+partial alphanumeric_keys
+xkb_symbols "pat" {
+    name[Group1]= "Thai (Pattachote)";
+    // The thai layout defines a second keyboard group and changes
+    // the behavior of a few modifier keys.
+
+    // converted to THai keysysms - Pablo Saratxaga pablo@mandrakesoft.com
+    // Pattachote modification by Visanu Euarchukiati -- visanu@inet.co.th
+    key <TLDE> { [ underscore,		Thai_baht	] };
+    key <AE01> { [ equal,		plus		] };
+    key <AE02> { [ Thai_leksong,	quotedbl	] };
+    key <AE03> { [ Thai_leksam,		slash		] };
+    key <AE04> { [ Thai_leksi,		comma		] };
+    key <AE05> { [ Thai_lekha,		question	] };
+    key <AE06> { [ Thai_sarauu,		Thai_sarau	] };
+    key <AE07> { [ Thai_lekchet,	underscore	] };
+    key <AE08> { [ Thai_lekpaet,	period		] };
+    key <AE09> { [ Thai_lekkao,		parenleft	] };
+    key <AE10> { [ Thai_leksun,		parenright	] };
+    key <AE11> { [ Thai_leknung,	minus		] };
+    key <AE12> { [ Thai_lekhok,		percent		] };
+
+    key <AD01> { [ Thai_maitaikhu,	Thai_maitri	] };
+    key <AD02> { [ Thai_totao,		Thai_ru		] };
+    key <AD03> { [ Thai_yoyak,		Thai_maiyamok	] };
+    key <AD04> { [ Thai_oang,		Thai_yoying	] };
+    key <AD05> { [ Thai_rorua,		Thai_sorusi	] };
+    key <AD06> { [ Thai_maiek,		Thai_saraue	] };
+    key <AD07> { [ Thai_dodek,		Thai_fofa	] };
+    key <AD08> { [ Thai_moma,		Thai_soso	] };
+    key <AD09> { [ Thai_wowaen,		Thai_thothung	] };
+    key <AD10> { [ Thai_saraae,		Thai_thophuthao	] };
+    key <AD11> { [ Thai_saraaimaimuan,	Thai_paiyannoi	] };
+    key <AD12> { [ Thai_chochoe,	Thai_lu		] };
+
+    key <AC01> { [ Thai_maitho,		Thai_maichattawa] };
+    key <AC02> { [ Thai_thothahan,	Thai_thothong	] };
+    key <AC03> { [ Thai_ngongu,		Thai_saraam	] };
+    key <AC04> { [ Thai_kokai,		Thai_nonen	] };
+    key <AC05> { [ Thai_maihanakat,	Thai_thanthakhat] };
+    key <AC06> { [ Thai_saraii,		Thai_sarauee	] };
+    key <AC07> { [ Thai_saraaa,		Thai_phophung	] };
+    key <AC08> { [ Thai_nonu,		Thai_chochang	] };
+    key <AC09> { [ Thai_sarae,		Thai_sarao	] };
+    key <AC10> { [ Thai_saraaimaimalai,	Thai_khorakhang	] };
+    key <AC11> { [ Thai_khokhai,	Thai_thonangmontho ] };
+
+    key <AB01> { [ Thai_bobaimai,	Thai_dochada	] };
+    key <AB02> { [ Thai_popla,		Thai_topatak	] };
+    key <AB03> { [ Thai_loling,		Thai_thothan	] };
+    key <AB04> { [ Thai_hohip,		Thai_phosamphao	] };
+    key <AB05> { [ Thai_sarai,		Thai_phinthu	] };
+    key <AB06> { [ Thai_khokhwai,	Thai_sosala	] };
+    key <AB07> { [ Thai_sosua,		Thai_honokhuk	] };
+    key <AB08> { [ Thai_saraa,		Thai_fofan	] };
+    key <AB09> { [ Thai_chochan,	Thai_choching	] };
+    key <AB10> { [ Thai_phophan,	Thai_lochula	] };
+
+    key <BKSL> { [ Thai_lakkhangyao,	Thai_nikhahit	] };
+};
+
+
+partial alphanumeric_keys
+xkb_symbols "tis" {
+    name[Group1]= "Thai (TIS-820.2538)";
+    // The thai layout defines a second keyboard group and changes
+    // the behavior of a few modifier keys.  
+
+    // converted to THai keysysms - Pablo Saratxaga <pablo@mandrakesoft.com>
+    // modified to TIS-820.2538 - Theppitak Karoonboonyanan <thep@linux.thai.net>
+    key <TLDE> {	[ 0x1000e4f,		0x1000e5b	]	};
+    key <AE01> {	[ Thai_baht,		Thai_lakkhangyao]	};
+    key <AE02> {	[ slash,  		Thai_leknung	]	};
+    key <AE03> {	[ minus,		Thai_leksong	]	};
+    key <AE04> {	[ Thai_phosamphao, 	Thai_leksam	]	};
+    key <AE05> {	[ Thai_thothung,   	Thai_leksi	]	};
+    key <AE06> {	[ Thai_sarau,		Thai_sarauu	]	};
+    key <AE07> {	[ Thai_saraue,		0x1000e4e	]	};
+    key <AE08> {	[ Thai_khokhwai,	Thai_lekha	]	};
+    key <AE09> {	[ Thai_totao,		Thai_lekhok	]	};
+    key <AE10> {	[ Thai_chochan,		Thai_lekchet	]	};
+    key <AE11> {	[ Thai_khokhai,		Thai_lekpaet	]	};
+    key <AE12> {	[ Thai_chochang,	Thai_lekkao	]	};
+
+    key <AD01> {	[ Thai_maiyamok,	Thai_leksun	]	};
+    key <AD02> {	[ Thai_saraaimaimalai, 	quotedbl	]	};
+    key <AD03> {	[ Thai_saraam,		Thai_dochada	]	};
+    key <AD04> {	[ Thai_phophan,		Thai_thonangmontho ]	};
+    key <AD05> {	[ Thai_saraa,		Thai_thothong	]	};
+    key <AD06> {	[ Thai_maihanakat,	Thai_nikhahit	]	};
+    key <AD07> {	[ Thai_saraii,		Thai_maitri	]	};
+    key <AD08> {	[ Thai_rorua,		Thai_nonen	]	};
+    key <AD09> {type[Group1]="THREE_LEVEL",
+    			[   Thai_nonu,	Thai_paiyannoi,	0x1000e5a]	};
+    key <AD10> {	[ Thai_yoyak,		Thai_yoying	]	};
+    key <AD11> {	[ Thai_bobaimai,	Thai_thothan	]	};
+    key <AD12> {	[ Thai_loling,		comma		]	};
+
+    key <AC01> {	[ Thai_fofan,		Thai_ru		]	};
+    key <AC02> {	[ Thai_hohip,		Thai_khorakhang	]	};
+    key <AC03> {	[ Thai_kokai,		Thai_topatak	]	};
+    key <AC04> {	[ Thai_dodek,		Thai_sarao	]	};
+    key <AC05> {	[ Thai_sarae,		Thai_chochoe	]	};
+    key <AC06> {	[ Thai_maitho,		Thai_maitaikhu	]	};
+    key <AC07> {	[ Thai_maiek,		Thai_maichattawa ]	};
+    key <AC08> {	[ Thai_saraaa,		Thai_sorusi	]	};
+    key <AC09> {	[ Thai_sosua,		Thai_sosala	]	};
+    key <AC10> {	[ Thai_wowaen,		Thai_soso	]	};
+    key <AC11> {	[ Thai_ngongu,		period		]	};
+
+    key <AB01> {	[ Thai_phophung,	parenleft	]	};
+    key <AB02> {	[ Thai_popla,		parenright	]	};
+    key <AB03> {	[ Thai_saraae,		Thai_choching	]	};
+    key <AB04> {	[ Thai_oang,		Thai_honokhuk	]	};
+    key <AB05> {	[ Thai_sarai,		Thai_phinthu	]	};
+    key <AB06> {	[ Thai_sarauee,		Thai_thanthakhat ]	};
+    key <AB07> {	[ Thai_thothahan,	question	]	};
+    key <AB08> {	[ Thai_moma,		Thai_thophuthao	]	};
+    key <AB09> {	[ Thai_saraaimaimuan,	Thai_lochula 	]	};
+    key <AB10> {	[ Thai_fofa,		Thai_lu		]	};
+
+    key <BKSL> {	[ Thai_khokhon,		Thai_khokhuat	]	};
+};
+
+partial alphanumeric_keys
+xkb_symbols "olpc" {
+
+    name[Group1]= "Thai";
+    // The OLPC thai layout
+    // walter@laptop.org
+
+    key <TLDE> { [ 0x1000E4F,  0x1000E5B ] };
+    key <AE01> { [ 0x1000E3F,  0x1000E45 ] };
+    key <AE02> { [     slash,  0x1000E51 ] };
+    key <AE03> { [     minus,  0x1000E52 ] };
+    key <AE04> { [ 0x1000E20,  0x1000E53 ] };
+    key <AE05> { [ 0x1000E16,  0x1000E54 ] };
+    key <AE06> { [ 0x1000E38,  0x1000E39 ] };
+    key <AE07> { [ 0x1000E36,  0x1000E4E ] };
+    key <AE08> { [ 0x1000E04,  0x1000E55 ] };
+    key <AE09> { [ 0x1000E15,  0x1000E56 ] };
+    key <AE10> { [ 0x1000E08,  0x1000E57 ] };
+    key <AE11> { [ 0x1000E02,  0x1000E58 ] };
+    key <AE12> { [ 0x1000E0A,  0x1000E59 ] };
+
+    key <AD01> { [ 0x1000E46,  0x1000E50 ] };
+    key <AD02> { [ 0x1000E44,   quotedbl ] };
+    key <AD03> { [ 0x1000E33,  0x1000E0E ] };
+    key <AD04> { [ 0x1000E1E,  0x1000E11 ] };
+    key <AD05> { [ 0x1000E30,  0x1000E18 ] };
+    key <AD06> { [ 0x1000E31,  0x1000E4D ] };
+    key <AD07> { [ 0x1000E35,  0x1000E4A ] };
+    key <AD08> { [ 0x1000E23,  0x1000E13 ] };
+    key <AD09> { [ 0x1000E19,  0x1000E2F ] };
+    key <AD10> { [ 0x1000E22,  0x1000E0D ] };
+    key <AD11> { [ 0x1000E1A,  0x1000E10 ] };
+    key <AD12> { [ 0x1000E25,      comma ] };
+
+    key <AC01> { [ 0x1000E1F,  0x1000E24 ] };
+    key <AC02> { [ 0x1000E2B,  0x1000E06 ] };
+    key <AC03> { [ 0x1000E01,  0x1000E0F ] };
+    key <AC04> { [ 0x1000E14,  0x1000E42 ] };
+    key <AC05> { [ 0x1000E40,  0x1000E0C ] };
+    key <AC06> { [ 0x1000E49,  0x1000E47 ] };
+    key <AC07> { [ 0x1000E48,  0x1000E4B ] };
+    key <AC08> { [ 0x1000E32,  0x1000E29 ] };
+    key <AC09> { [ 0x1000E2A,  0x1000E28 ] };
+    key <AC10> { [ 0x1000E27,  0x1000E0B ] };
+    key <AC11> { [ 0x1000E07,     period ] };
+    key <BKSL> { [ 0x1000E05,  0x1000E03 ] };
+
+    key <AB01> { [ 0x1000E1C,  parenleft ] };
+    key <AB02> { [ 0x1000E1B, parenright ] };
+    key <AB03> { [ 0x1000E41,  0x1000E09 ] };
+    key <AB04> { [ 0x1000E2D,  0x1000E2E ] };
+    key <AB05> { [ 0x1000E34,  0x1000E3A ] };
+    key <AB06> { [ 0x1000E37,  0x1000E4C ] };
+    key <AB07> { [ 0x1000E17,   question ] };
+    key <AB08> { [ 0x1000E21,  0x1000E12 ] };
+    key <AB09> { [ 0x1000E43,  0x1000E2C ] };
+    key <AB10> { [ 0x1000E1D,  0x1000E26 ] };
+
+    include "group(olpc)"
+};
+partial alphanumeric_keys
+xkb_symbols "ThaiMnc" {
+
+    // COPYRIGHT    "MIT"
+
+    name[Group1]= "Thai (Manoonchai v1.0)";
+
+
+    key <AE10> { [ 0x1000030, 0x1000029, 0x1000e50,voidsymbol] };
+    key <AE01> { [ 0x1000031, 0x1000021, 0x1000e51,voidsymbol] };
+    key <AE02> { [ 0x1000032, 0x1000040, 0x1000e52,voidsymbol] };
+    key <AE03> { [ 0x1000033, 0x1000023, 0x1000e53,voidsymbol] };
+    key <AE04> { [ 0x1000034, 0x1000024, 0x1000e54,voidsymbol] };
+    key <AE05> { [ 0x1000035, 0x1000025, 0x1000e55,voidsymbol] };
+    key <AE06> { [ 0x1000036, 0x100005e, 0x1000e56,voidsymbol] };
+    key <AE07> { [ 0x1000037, 0x1000026, 0x1000e57,voidsymbol] };
+    key <AE08> { [ 0x1000038, 0x100002a, 0x1000e58,voidsymbol] };
+    key <AE09> { [ 0x1000039, 0x1000028, 0x1000e59,voidsymbol] };
+    key <AE11> { [ 0x100002d, 0x100005f, 0x10000f7,voidsymbol] };
+    key <AE12> { [ 0x100003d, 0x100002b, 0x10000d7,voidsymbol] };
+    key <TLDE> { [ 0x1000060, 0x100007e, 0x1000060,voidsymbol] };
+    key <AD01> { [ 0x1000e43, 0x1000e12,voidsymbol,voidsymbol] };
+    key <AD02> { [ 0x1000e15, 0x1000e0f,voidsymbol,voidsymbol] };
+    key <AD03> { [ 0x1000e2b, 0x1000e0b,voidsymbol,voidsymbol] };
+    key <AD04> { [ 0x1000e25, 0x1000e0d,voidsymbol,voidsymbol] };
+    key <AD05> { [ 0x1000e2a, 0x1000e1f,voidsymbol,voidsymbol] };
+    key <AD06> { [ 0x1000e1b, 0x1000e09,voidsymbol,voidsymbol] };
+    key <AD07> { [ 0x1000e31, 0x1000e36, 0x1000e3a,voidsymbol] };
+    key <AD08> { [ 0x1000e01, 0x1000e18,voidsymbol,voidsymbol] };
+    key <AD09> { [ 0x1000e34, 0x1000e10,voidsymbol,voidsymbol] };
+    key <AD10> { [ 0x1000e1a, 0x1000e0e,voidsymbol,voidsymbol] };
+    key <AD11> { [ 0x1000e47, 0x1000e06, 0x100005b, 0x100007b] };
+    key <AD12> { [ 0x1000e2c, 0x1000e11, 0x100005d, 0x100007d] };
+    key <AC01> { [ 0x1000e07, 0x1000e29, 0x10025cc,voidsymbol] };
+    key <AC02> { [ 0x1000e40, 0x1000e16, 0x1000e4f,voidsymbol] };
+    key <AC03> { [ 0x1000e23, 0x1000e41, 0x1000e5b,voidsymbol] };
+    key <AC04> { [ 0x1000e19, 0x1000e0a, 0x1000e3f,voidsymbol] };
+    key <AC05> { [ 0x1000e21, 0x1000e1e,voidsymbol,voidsymbol] };
+    key <AC06> { [ 0x1000e2d, 0x1000e1c, 0x1000e4d,voidsymbol] };
+    key <AC07> { [ 0x1000e32, 0x1000e33, 0x1000e45,voidsymbol] };
+    key <AC08> { [ 0x1000e48, 0x1000e02, 0x1000e03,voidsymbol] };
+    key <AC09> { [ 0x1000e49, 0x1000e42,voidsymbol,voidsymbol] };
+    key <AC10> { [ 0x1000e27, 0x1000e20, 0x100003b, 0x100003a] };
+    key <AC11> { [ 0x1000e37, 0x1000022, 0x1000027, 0x1000022] };
+    key <BKSL> { [ 0x1000e2f, 0x1000e0c, 0x100005c, 0x100007c] };
+    key <AB01> { [ 0x1000e38, 0x1000e24, 0x1000e26,voidsymbol] };
+    key <AB02> { [ 0x1000e44, 0x1000e1d,voidsymbol,voidsymbol] };
+    key <AB03> { [ 0x1000e17, 0x1000e46, 0x1000e5a,voidsymbol] };
+    key <AB04> { [ 0x1000e22, 0x1000e13,voidsymbol,voidsymbol] };
+    key <AB05> { [ 0x1000e08, 0x1000e4a,voidsymbol,voidsymbol] };
+    key <AB06> { [ 0x1000e04, 0x1000e4b, 0x1000e05,voidsymbol] };
+    key <AB07> { [ 0x1000e35, 0x1000e4c, 0x1000e4e,voidsymbol] };
+    key <AB08> { [ 0x1000e14, 0x1000e28, 0x100002c, 0x100003c] };
+    key <AB09> { [ 0x1000e30, 0x1000e2e, 0x100002e, 0x100003e] };
+    key <AB10> { [ 0x1000e39, 0x100003f, 0x100002f, 0x100003f] };
+    key <SPCE> { [ 0x1000020, 0x1000020, 0x1000020, 0x1000020] };
+    key <KPDL> { [ 0x100002e, 0x100002c, 0x100002e, 0x100002e] };
+
+    include "level3(ralt_switch)"
+};

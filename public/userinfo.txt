@@ -1,0 +1,1 @@
+{"username":"6110110391","first_name":"WORRAMAIT","last_name":"KOSITPAIBOON","staff_id":"6110110391","email":"mingmaomak@gmail.com","campus_id":"01","fac_id":"06","dept_id":"034","pos_id":"06"}
