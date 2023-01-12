@@ -47,17 +47,131 @@ try {
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
   $userinfo= curl_exec($ch);
   curl_close($ch);
-  $userinfo_text_file = fopen("userinfo.txt", "w") or die("Unable to open file to write!");
-  fwrite($userinfo_text_file, $userinfo);
+
+  // Changing from keeping the user info inside file to inside cookies
+  // $userinfo_text_file = fopen("userinfo.txt", "w") or die("Unable to open file to write!");
+  // fwrite($userinfo_text_file, $userinfo);
+
+  // VALUES ('".$user_object->username."', '".$user_object->first_name."','".$user_object->last_name."','".$user_object->staff_id."','".$user_object->email."','".$user_object->campus_id."','".$user_object->fac_id."','".$user_object->dept_id."','".$user_object->pos_id."')";
+  $user_object = json_decode($userinfo);
+
+  $cookie_name = "psu_funding_disburse_username";
+  $cookie_value = $user_object->username;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_first_name";
+  $cookie_value = $user_object->first_name;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_last_name";
+  $cookie_value = $user_object->last_name;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_staff_id";
+  $cookie_value = $user_object->staff_id;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_email";
+  $cookie_value = $user_object->email;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_campus_id";
+  $cookie_value = $user_object->campus_id;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_fac_id";
+  $cookie_value = $user_object->fac_id;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_dept_id";
+  $cookie_value = $user_object->dept_id;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+  $cookie_name = "psu_funding_disburse_pos_id";
+  $cookie_value = $user_object->pos_id;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+  
 } catch (Exception $ex) {
-  //echo $ex;
-  try {
-    $userinfo_text_file = fopen("userinfo.txt", "r") or die("Unable to open file to read!");
-    $userinfo= fread($userinfo_text_file,filesize("userinfo.txt"));
-    fclose($userinfo_text_file);
-  } catch (Exception $ex) {
-    //echo $ex;
+  echo "<script>console.log(\"PHP exception: \" + \"".$ex."\" );</script>";
+    
+    // Changing from reading the user info from file to from cookies
+    // $user_object = json_decode($userinfo);
+    // $userinfo_text_file = fopen("userinfo.txt", "r") or die("Unable to open file to read!");
+    // $userinfo= fread($userinfo_text_file,filesize("userinfo.txt"));
+    // fclose($userinfo_text_file);
+    
+  $cookie_name = "psu_funding_disburse_username";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
   }
+
+  $cookie_name = "psu_funding_disburse_first_name";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_last_name";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_staff_id";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_email";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_campus_id";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_fac_id";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_dept_id";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
+  $cookie_name = "psu_funding_disburse_pos_id";
+  if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+  } else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name] . "<br>";
+  }
+
 }
 
 // echo '<div style="background-color:Navy; color:white;" align="center">';
@@ -65,8 +179,8 @@ try {
 // echo '</div>';
 // {"username":"6110110391","first_name":"WORRAMAIT","last_name":"KOSITPAIBOON","staff_id":"6110110391","email":"mingmaomak@gmail.com","campus_id":"01","fac_id":"06","dept_id":"034","pos_id":"06"}
 
-$user_object = json_decode($userinfo);
-$userinfo_pretty = json_encode($user_object, JSON_PRETTY_PRINT);
+
+// $userinfo_pretty = json_encode($user_object, JSON_PRETTY_PRINT);
 // echo '<div style="background-color:Maroon; color:white;" align="center">';
 // echo '<pre>'.$userinfo_pretty.'</pre>';
 // echo '</div>';
@@ -83,7 +197,8 @@ $userinfo_pretty = json_encode($user_object, JSON_PRETTY_PRINT);
 // }
 
 echo '<h1>ระบบเบิกจ่ายเงินรายวิชาโครงงาน คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์</h1>';
-echo '<h2>current user: '.$user_object->first_name.' '.$user_object->last_name.'</h2>';
+
+// echo '<h2>current user: '.$user_object->first_name.' '.$user_object->last_name.'</h2>';
 
 // $servername = "localhost";
 // $username = "amongus";
@@ -121,3 +236,5 @@ echo '<h2>current user: '.$user_object->first_name.' '.$user_object->last_name.'
 // echo "Error: " . $sql . "<br>" . $conn->error;
 // }
 
+?>
+<a href="{{ url('/upload-file') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">upload file</a>

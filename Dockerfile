@@ -14,8 +14,6 @@ RUN docker-php-ext-install pdo pdo_mysql bcmath curl opcache
 
 WORKDIR /var/www
 
-
-
 #!# install nodejs latest version (19.x) as https://github.com/nodesource/distributions/blob/master/README.md#requests indicates
 #!RUN apt-get install -y nodejs npm
 #!# attempting to run the Vite development server...
