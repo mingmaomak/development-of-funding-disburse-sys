@@ -8,8 +8,9 @@ ENV PHP_OPCACHE_REVALIDATE_FREQ=1
 RUN usermod -u 1000 www-data
 
 RUN apt-get update -y
-RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev nginx
+RUN apt-get install -y unzip libpq-dev libcurl4-gnutls-dev nginx neofetch
 RUN docker-php-ext-install pdo pdo_mysql bcmath curl opcache
+RUN neofetch  --memory_percent on --shell_path on --de_version on --refresh_rate on --cpu_temp C --disk_show '/'  --disk_percent on 
 # RUN docker-php-ext-enable opcache
 
 WORKDIR /var/www
